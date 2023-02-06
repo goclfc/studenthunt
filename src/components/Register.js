@@ -40,7 +40,7 @@ const Register = (props) => {
               ვეთანხმები წესებს და პირობებს
           </div>
           <div className="register-button">
-            <button>შესვლა</button>
+            <button>რეგისტრაცია</button>
           </div>
           <div className="register-goBack">
             გაქვს ექაუნთი? <button onClick={handleClick}>Sign In</button>
