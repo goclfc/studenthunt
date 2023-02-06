@@ -7,6 +7,11 @@ const Header = () => {
     const handleLogin = ()=>{
         setShowLogin(true)
     }
+    const handleClick=(e)=>{
+      if(e.target.className==='loginBg'){
+        setShowLogin(false)
+      }
+    }
   return (
     <div className="header flex items-center p-8">
       <div className="logo-place flex items-center" style={{}}>
@@ -16,7 +21,7 @@ const Header = () => {
       <div
         className="menu flex justify-end w-full"
         style={{
-          fontFamily: "FiraGO",
+          fontFamily: "fira sans",
           fontStyle: "normal",
           fontWeight: "700",
           fontSize: "18px",
@@ -30,7 +35,9 @@ const Header = () => {
         <button className="mr-4" onClick={handleLogin}>Log in</button>
       </div>
       {showLogin &&
+      <div className="loginBg" onClick={handleClick}>
       <Login/>
+      </div>
       }
     </div>
   );

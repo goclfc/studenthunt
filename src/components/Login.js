@@ -3,8 +3,14 @@ import Register from "./Register";
 import "./signin.css";
 const Login = () => {
   const [showSignIn, setShowSignin] = useState(true);
+  const [showRegister, setShowRegister] = useState(false);
   const SignIn = (props) => {
-    const showRegister = props.setShowSignin;
+    const showRegister = props.setShowRegister;
+    const showSignIn = props.setShowSignin;
+    const handleClick = ()=>{
+      showRegister(true)
+      showSignIn(false)
+    }
     return (
       <div>
         <div className="signin-header">გაიარე ავტორიზაცია</div>
@@ -28,7 +34,7 @@ const Login = () => {
           </div>
           <div className="signin-footer">
             არ გაქვს ექაუნთი?{" "}
-            <button onClick={() => showRegister(false)}>Sign up</button>
+            <button onClick={handleClick}>Sign up</button>
           </div>
         </div>
       </div>
@@ -36,7 +42,12 @@ const Login = () => {
   };
   return (
     <div className="signin-card">
-      {showSignIn ? <SignIn setShowSignin={setShowSignin} /> : <Register />}
+      {showSignIn && 
+       <SignIn setShowSignin={setShowSignin} setShowRegister={setShowRegister}/>
+      }
+      {showRegister && 
+       <Register setShowSignIn={setShowSignin} setShowRegister={setShowRegister} /> 
+      }
     </div>
   );
 };

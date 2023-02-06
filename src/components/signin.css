@@ -1,10 +1,25 @@
+.loginBg {
+  width: 100vw;
+  height: 100vh;
+  background-color:rgba(138, 125, 125, 0.4);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  top: 110px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
 .signin-card {
   width: 572px;
   height: 750px;
   left: 0;
   right: 0;
   margin: auto;
-  top: 150px;
   position: absolute;
   background: #ffffff;
   mix-blend-mode: normal;
@@ -16,7 +31,7 @@
   flex-wrap: wrap;
 }
 .signin-header {
-  font-family: "FiraGO";
+  font-family: 'Fira Sans', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -29,7 +44,7 @@
 }
 .signin-text {
   width: 536px;
-  font-family: "FiraGO";
+  font-family: 'Fira Sans', sans-serif;
   font-style: normal;
   font-weight: 350;
   font-size: 18px;
@@ -88,7 +103,7 @@
   border-radius: 9px;
 }
 .signin-button button {
-  font-family: "FiraGO";
+  font-family: 'Fira Sans', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;

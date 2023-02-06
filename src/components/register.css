@@ -1,0 +1,146 @@
+.register-wrapper {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.register-header {
+  font-family: 'Fira Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  /* identical to box height, or 122% */
+
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  /* Gray/900 */
+
+  color: #101828;
+}
+.register-text {
+  font-family: 'Fira Sans', sans-serif;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 20px;
+  line-height: 30px;
+  /* or 150% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Gray/500 */
+
+  color: #667085;
+}
+.register-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    justify-content: center;
+
+}
+.register-inputs input {
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 12px 16px;
+gap: 8px;
+width: 220px;
+height: 48px;
+/* White */
+background: #FFFFFF;
+/* Gray/300 */
+border: 1px solid #D0D5DD;
+/*Shadow/xs */
+margin-top: 5px;
+box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+border-radius: 8px;
+}
+.input-combo {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input-full{
+    width: 90%;
+}
+.input-full input {
+    width: 100%;
+}
+.register-wrapper label {
+    font-family: 'Fira Sans', sans-serif;
+font-style: normal;
+font-weight: 350;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+
+/* Gray/700 */
+
+color: #344054;
+}
+#input-text {
+    width: 450px;
+    height: 128px;
+    margin-top: 10px;
+    /* White */
+    background: #FFFFFF;
+    /* Gray/300 */
+    border: 1px solid #D0D5DD;
+    /* Shadow/xs */
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+}
+.register-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.register-button button{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 20px;
+gap: 8px;
+
+width: 480px;
+height: 48px;
+
+background: #2563EB;
+/* Primary/600 */
+
+border: 1px solid #7F56D9;
+/* Shadow/xs */
+color: white;
+box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+border-radius: 8px;
+}
+.register-checkboxes {
+    display: flex;
+}
+.register-checkboxes input {
+width: 20px;
+height: 20px;
+/* White */
+background: #FFFFFF;
+/* Gray/300 */
+border: 1px solid #D0D5DD;
+border-radius: 6px; 
+margin-right: 30px;
+margin-bottom: 5px;
+margin-left: 5px;
+}
+.register-goBack {
+    margin: 10px;
+}
+.register-goBack button {
+    color: #2563EB;
+}
