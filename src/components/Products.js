@@ -8,7 +8,7 @@ const Products = () => {
   const token = localStorage.getItem("token")
   useEffect(()=>{
     var myHeaders = new Headers();
-    myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjc3MTUwNzUxLCJleHAiOjE2Nzk3NDI3NTF9.NfG0pnDG2RXpgSsc_f-Q75TS-o3kab0Cxf422EOgE-8")
+    myHeaders.append("Authorization", `Bearer ${token}`)
     
     var requestOptions = {
       method: 'GET',
@@ -17,10 +17,11 @@ const Products = () => {
     };
     
     fetch("http://localhost:1337/api/products", requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
+      .then(response => response.json())
+      .then(result => setProducts(result.data))
       .catch(error => console.log('error', error));
   },[])
+  console.log(products)
   return (
     <div
       className="main flex justify-center w-full "
@@ -46,7 +47,57 @@ const Products = () => {
           />{" "}
           კვება
         </div>
+        {products.length>0&&
+        products.map(product=>(
+
         <div
+          className="product-card bg-white"
+          style={{
+            width: "20.3rem",
+            height: "32.4rem",
+            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+            borderRadius: "0px 20px 20px 20px",
+            marginRight: "90px",
+          }}
+        >
+          <div className="card-img">
+            <img src={product.attributes.coverUrl} />
+          </div>
+          <div
+            className="card-logo flex justify-center"
+            style={{ marginTop: "22px" }}
+          >
+            <img src={product.attributes.logoUrl} />
+          </div>
+          <div className="card-description flex flex-col items-center">
+            <div
+              className="description-header"
+              style={{
+                fontSize: "29px",
+                fontWeight: "700",
+                color: "black",
+                marginTop: "23px",
+              }}
+            >
+              {product.attributes.productName}
+            </div>
+            <div
+              className="description-footer p-2"
+              style={{
+                fontSize: "19px",
+                fontWeight: "700",
+                color: "#8B8B8B",
+                marginTop: "9px",
+              }}
+            >
+              {product.attributes.description}
+
+            </div>
+          </div>
+        </div>
+        ))
+        }
+        {/* <div
           className="product-card bg-white"
           style={{
             width: "20.3rem",
@@ -97,95 +148,6 @@ const Products = () => {
             height: "32.4rem",
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
             borderRadius: "0px 20px 20px 20px",
-            marginRight: "90px",
-          }}
-        >
-          <div className="card-img">
-            <img src={bakery} />
-          </div>
-          <div
-            className="card-logo flex justify-center"
-            style={{ marginTop: "22px" }}
-          >
-            <img src={bakeryLogo} />
-          </div>
-          <div className="card-description flex flex-col items-center">
-            <div
-              className="description-header"
-              style={{
-                fontSize: "29px",
-                fontWeight: "700",
-                color: "black",
-                marginTop: "23px",
-              }}
-            >
-              30 % ფასდაკლება
-            </div>
-            <div
-              className="description-footer"
-              style={{
-                fontSize: "19px",
-                fontWeight: "700",
-                color: "#8B8B8B",
-                marginTop: "9px",
-              }}
-            >
-              ყველა სახის პროდუქტზე
-            </div>
-          </div>
-        </div>
-        <div
-          className="product-card bg-white"
-          style={{
-            width: "20.3rem",
-            height: "32.4rem",
-            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-            borderRadius: "0px 20px 20px 20px",
-          }}
-        >
-          <div className="card-img">
-            <img src={bakery} />
-          </div>
-          <div
-            className="card-logo flex justify-center"
-            style={{ marginTop: "22px" }}
-          >
-            <img src={bakeryLogo} />
-          </div>
-          <div className="card-description flex flex-col items-center">
-            <div
-              className="description-header"
-              style={{
-                fontSize: "29px",
-                fontWeight: "700",
-                color: "black",
-                marginTop: "23px",
-              }}
-            >
-              30 % ფასდაკლება
-            </div>
-            <div
-              className="description-footer"
-              style={{
-                fontSize: "19px",
-                fontWeight: "700",
-                color: "#8B8B8B",
-                marginTop: "9px",
-              }}
-            >
-              ყველა სახის პროდუქტზე
-            </div>
-          </div>
-        </div>
-        <div
-          className="product-card bg-white"
-          style={{
-            width: "20.3rem",
-            height: "32.4rem",
-            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-            borderRadius: "0px 20px 20px 20px",
-            marginRight: "90px",
-            marginTop: "18px",
           }}
         >
           <div className="card-img">
@@ -274,6 +236,7 @@ const Products = () => {
             height: "32.4rem",
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
             borderRadius: "0px 20px 20px 20px",
+            marginRight: "90px",
             marginTop: "18px",
           }}
         >
@@ -311,6 +274,50 @@ const Products = () => {
             </div>
           </div>
         </div>
+        <div
+          className="product-card bg-white"
+          style={{
+            width: "20.3rem",
+            height: "32.4rem",
+            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+            borderRadius: "0px 20px 20px 20px",
+            marginTop: "18px",
+          }}
+        >
+          <div className="card-img">
+            <img src={bakery} />
+          </div>
+          <div
+            className="card-logo flex justify-center"
+            style={{ marginTop: "22px" }}
+          >
+            <img src={bakeryLogo} />
+          </div>
+          <div className="card-description flex flex-col items-center">
+            <div
+              className="description-header"
+              style={{
+                fontSize: "29px",
+                fontWeight: "700",
+                color: "black",
+                marginTop: "23px",
+              }}
+            >
+              30 % ფასდაკლება
+            </div>
+            <div
+              className="description-footer"
+              style={{
+                fontSize: "19px",
+                fontWeight: "700",
+                color: "#8B8B8B",
+                marginTop: "9px",
+              }}
+            >
+              ყველა სახის პროდუქტზე
+            </div>
+          </div>
+        </div> */}
       </div>
     </div>
   );
