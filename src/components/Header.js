@@ -1,17 +1,21 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../resources/images/Group.svg";
 import name from "../resources/images/name.svg";
 import Login from "./Login";
 const Header = () => {
-    const [showLogin,setShowLogin]= useState(false)
-    const handleLogin = ()=>{
-        setShowLogin(true)
+  const [showLogin, setShowLogin] = useState(false);
+  const user = localStorage.getItem('user')
+  const token = localStorage.getItem('token')
+  console.log(user)
+  const handleLogin = () => {
+    setShowLogin(true);
+  };
+
+  const handleClick = (e) => {
+    if (e.target.className === "loginBg") {
+      setShowLogin(false);
     }
-    const handleClick=(e)=>{
-      if(e.target.className==='loginBg'){
-        setShowLogin(false)
-      }
-    }
+  };
   return (
     <div className="header flex items-center p-8">
       <div className="logo-place flex items-center" style={{}}>
@@ -32,13 +36,19 @@ const Header = () => {
         <button className="mr-4">ჩვენს შესახებ</button>
         <button className="mr-4">როგორ მუშაობს?</button>
         <div className="mr-2">|</div>
-        <button className="mr-4" onClick={handleLogin}>Log in</button>
-      </div>
-      {showLogin &&
-      <div className="loginBg" onClick={handleClick}>
-      <Login/>
-      </div>
+        {user? <button>პროფილი</button>
+        
+      :
+        <button className="mr-4" onClick={handleLogin}>
+          Log in
+        </button>
       }
+      </div>
+      {showLogin && (
+        <div className="loginBg" onClick={handleClick}>
+          <Login />
+        </div>
+      )}
     </div>
   );
 };
