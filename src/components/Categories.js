@@ -4,6 +4,7 @@ import sport from "../resources/images/sport.svg";
 import technic from "../resources/images/technic.svg";
 import trousers from "../resources/images/trousers.svg";
 import piza from "../resources/images/piza.svg";
+import { Link } from "react-router-dom";
 
 const Categories = ()=>{
     return (
@@ -35,6 +36,7 @@ const Categories = ()=>{
             ></input>
           </div>
           <div className="categories-body flex">
+            <Link to='accesories'>
             <div
               className="flex flex-col items-center"
               style={{ margin: "25px 25px 25px 0px " }}
@@ -56,6 +58,8 @@ const Categories = ()=>{
                 აქსესუარები
               </div>
             </div>
+            </Link>
+            <Link to='food'>
             <div
               className="flex flex-col items-center"
               style={{ margin: "25px" }}
@@ -73,8 +77,11 @@ const Categories = ()=>{
               >
                 <img src={piza} />
               </div>
-              <div style={{ fontSize: "14px", marginTop: "18px" ,}}>კვება</div>
+
+              <div style={{ fontSize: "14px", marginTop: "18px" ,cursor:'pointer'}}>კვება</div>
             </div>
+            </Link>
+            <Link to='dress'>
             <div
               className="flex flex-col items-center"
               style={{ margin: "25px" }}
@@ -96,6 +103,8 @@ const Categories = ()=>{
                 ტანსაცმელი
               </div>
             </div>
+            </Link>
+            <Link to='sport'>
             <div
               className="flex flex-col items-center"
               style={{ margin: "25px" }}
@@ -115,6 +124,8 @@ const Categories = ()=>{
               </div>
               <div style={{ fontSize: "14px", marginTop: "18px" }}>სპორტი</div>
             </div>
+            </Link>
+            <Link to='entertainment'>
             <div
               className="flex flex-col items-center"
               style={{ margin: "25px" }}
@@ -134,6 +145,8 @@ const Categories = ()=>{
               </div>
               <div style={{ fontSize: "14px", marginTop: "18px" }}>გართობა</div>
             </div>
+            </Link>
+            <Link to='technic'>
             <div
               className="flex flex-col items-center"
               style={{ margin: "25px" }}
@@ -153,6 +166,7 @@ const Categories = ()=>{
               </div>
               <div style={{ fontSize: "14px", marginTop: "18px" }}>ტექნიკა</div>
             </div>
+            </Link>
           </div>
         </div>
       </div>

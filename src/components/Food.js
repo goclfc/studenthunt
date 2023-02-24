@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from "react";
 import piza from "../resources/images/piza.svg";
-const Products = () => {
+import {Link} from 'react-router-dom'
+const Food = () => {
   const [products,setProducts] = useState([])
   const token = localStorage.getItem("token")
   useEffect(()=>{
@@ -18,7 +19,7 @@ const Products = () => {
       .then(result => setProducts(result.data))
       .catch(error => console.log('error', error));
   },[])
-  console.log(products)
+  console.log(products.id)
   return (
     <div
       className="main flex justify-center w-full "
@@ -41,12 +42,12 @@ const Products = () => {
           <img
             src={piza}
             style={{ height: "69px", width: "69px", marginRight: "17px" }}
-          />{" "}
+          />
           კვება
         </div>
         {products.length>0&&
         products.map(product=>(
-
+          <Link to={':'+product.id} state={{ product }}>
         <div
           className="product-card bg-white"
           style={{
@@ -92,6 +93,7 @@ const Products = () => {
             </div>
           </div>
         </div>
+        </Link>
         ))
         }
  
@@ -99,4 +101,4 @@ const Products = () => {
     </div>
   );
 };
-export default Products;
+export default Food;

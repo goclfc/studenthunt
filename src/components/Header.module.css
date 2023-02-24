@@ -1,0 +1,44 @@
+.profile {
+    position: absolute;
+    background-color: white;
+   
+    top: 6rem;
+    right: 10px;
+    display: flex;
+    border-radius: 10px;
+    padding:10px;
+    flex-direction: column;
+}
+.userHeader {
+    display: flex;
+    border-bottom: 1px solid #F2F4F7;
+    justify-content: center;
+    align-items: center;
+}
+.userIcon img {
+    width: 60px;
+    height: 60px;
+}
+.userInfo div{
+    display: block;
+    margin-left: 20px;
+    font-family: 'FiraGO';
+font-style: normal;
+font-weight: 350;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+
+/* Gray/700 */
+
+color: #344054;
+}
+.profileBody {
+    border-bottom: 1px solid #F2F4F7;
+}
+.profileSection{
+    display: flex;
+    align-items: center;
+}
+.profileSection img { padding: 10px; margin-right: 20px;}

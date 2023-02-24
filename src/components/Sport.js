@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from "react";
 import piza from "../resources/images/piza.svg";
-const Products = () => {
+const Sport = () => {
   const [products,setProducts] = useState([])
   const token = localStorage.getItem("token")
   useEffect(()=>{
@@ -42,7 +42,7 @@ const Products = () => {
             src={piza}
             style={{ height: "69px", width: "69px", marginRight: "17px" }}
           />{" "}
-          კვება
+          სპორტი
         </div>
         {products.length>0&&
         products.map(product=>(
@@ -99,4 +99,4 @@ const Products = () => {
     </div>
   );
 };
-export default Products;
+export default Sport;
