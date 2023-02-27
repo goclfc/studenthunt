@@ -14,12 +14,14 @@ const Food = () => {
       redirect: 'follow'
     };
     
-    fetch("http://localhost:1337/api/products", requestOptions)
+    fetch("https://studenthunt.herokuapp.com/api/categories?populate=*", requestOptions)
       .then(response => response.json())
-      .then(result => setProducts(result.data))
+      .then(result => {
+        const food = result.data.find(item => item.attributes.Name==="Food").attributes.products
+        setProducts(food.data)
+      })
       .catch(error => console.log('error', error));
   },[])
-  console.log(products.id)
   return (
     <div
       className="main flex justify-center w-full "
@@ -47,7 +49,7 @@ const Food = () => {
         </div>
         {products.length>0&&
         products.map(product=>(
-          <Link to={':'+product.id} state={{ product }}>
+          <Link to={':'+product.id} state={{ product }} key={product.id}>
         <div
           className="product-card bg-white"
           style={{

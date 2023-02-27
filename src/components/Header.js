@@ -28,6 +28,11 @@ const Header = () => {
   const handleProfileClick = ()=>{
     setShowProfile(prevState=>!prevState)
   }
+  const handleLogOut = ()=>{
+    localStorage.removeItem('token')
+    localStorage.removeItem('user')
+    window.location.reload(false)
+  }
   return (
     <div className="header flex items-center p-8">
       <div className="logo-place flex items-center" style={{}}>
@@ -85,7 +90,7 @@ const Header = () => {
             </div>
             
           </div>
-          <div className={styles.profileSection}>
+          <div className={styles.profileSection} onClick={handleLogOut}>
             <img src={logOutIcon}/> გასვლა
           </div>
         </div>

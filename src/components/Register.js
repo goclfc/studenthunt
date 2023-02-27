@@ -1,3 +1,4 @@
+import SignUpForm from "./SignUpForm";
 import "./register.css";
 const Register = (props) => {
     const showRegister = props.setShowRegister
@@ -8,7 +9,8 @@ const Register = (props) => {
     }
   return (
     <div className="register-wrapper">
-      <div className="register-header">რეგისტრაცია</div>
+      <SignUpForm/>
+      {/* <div className="register-header">რეგისტრაცია</div>
       <div className="register-text">
         ძალიან გვიხარია, შენი შემოერთება, შევეცდებით დაუვიწყარი გამოცდილება
         შემოგთავაზოთ
@@ -46,7 +48,7 @@ const Register = (props) => {
             გაქვს ექაუნთი? <button onClick={handleClick}>Sign In</button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

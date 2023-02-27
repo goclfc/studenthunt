@@ -4,19 +4,22 @@ const Products = () => {
   const [products,setProducts] = useState([])
   const token = localStorage.getItem("token")
   useEffect(()=>{
-    var myHeaders = new Headers();
-    myHeaders.append("Authorization", `Bearer ${token}`)
-    
-    var requestOptions = {
-      method: 'GET',
-      headers: myHeaders,
-      redirect: 'follow'
-    };
-    
-    fetch("http://localhost:1337/api/products", requestOptions)
-      .then(response => response.json())
-      .then(result => setProducts(result.data))
-      .catch(error => console.log('error', error));
+    if(token){
+
+      var myHeaders = new Headers();
+      myHeaders.append("Authorization", `Bearer ${token}`)
+      
+      var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+      };
+      
+      fetch("https://studenthunt.herokuapp.com/api/products", requestOptions)
+        .then(response => response.json())
+        .then(result => setProducts(result.data))
+        .catch(error => console.log('error', error));
+    }
   },[])
   console.log(products)
   return (

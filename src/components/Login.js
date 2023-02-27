@@ -32,7 +32,7 @@ const Login = () => {
     redirect: 'follow'
   };
   
-  fetch("http://localhost:1337/api/auth/local", requestOptions)
+  fetch("https://studenthunt.herokuapp.com/api/auth/local", requestOptions)
     .then(response => response.json())
     .then(result => {
       console.log(result.jwt)
