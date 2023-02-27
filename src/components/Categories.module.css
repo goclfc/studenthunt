@@ -1,0 +1,55 @@
+.wrapper {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    max-width: 100vw;
+    border: 1px solid white;
+}
+.categories {
+    width: 100%;
+}
+.description {
+    color: white;
+    margin: 10px 20%;
+
+}
+.input {
+    color: white;
+    margin: 10px 20%;
+}
+
+.categoriesList {
+    display: flex;
+    max-width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.categoriesList a {
+    max-width: 15vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.categorie {
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    width: calc(6vw);
+    height: calc(6vw);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.categorie img {
+    width: 100%;
+    height: auto;
+}
+.categorieName {
+    color: white;
+    font-size:calc(2vw);
+    text-align: center;
+    margin: 10px 0px;
+}

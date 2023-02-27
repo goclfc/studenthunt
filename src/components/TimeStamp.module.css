@@ -1,0 +1,37 @@
+.timestampWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.timestampWrapper table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+.timestampWrapper th {
+    text-align: center;
+    border-radius: 5px;
+
+}
+.timestampWrapper td {
+    border-radius: 5px;
+    text-align: center;
+    
+    background-color: bisque;
+}
+.timestampWrapper table tbody tr :first-child{
+    color: rgb(74, 20, 20);
+    font-weight: bolder;
+}
+.timestampWrapper table tbody tr :nth-child(2){
+    color: rgb(146, 41, 41);
+    font-weight: bolder;
+}
+.timestampWrapper table tbody tr :nth-child(3){
+    color: rgb(214, 59, 59);
+    font-weight: bolder;
+}
+.timestampWrapper table tbody tr :nth-child(4){
+    font-weight: bolder;
+    color: red;
+}

@@ -1,3 +1,18 @@
+.headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.buttonsWrapper {
+    display: flex;
+    margin-left: auto;
+}
+.headerLogo{
+    display: flex;
+}
 .profile {
     position: absolute;
     background-color: white;
