@@ -34,7 +34,7 @@ const Accesories = () => {
         className="products-wrapper flex flex-wrap justify-center"
         style={{ maxWidth: "1440px" }}
       >
-        <div
+        {/* <div
           className="main-header w-full flex items-center"
           style={{
             fontSize: "47px",
@@ -49,7 +49,7 @@ const Accesories = () => {
             style={{ height: "69px", width: "69px", marginRight: "17px" }}
           />
           აქსესუარები
-        </div>
+        </div> */}
         <div className={styles.productsWrapper}>
         {products.length>0&&
         products.map(product=>(
