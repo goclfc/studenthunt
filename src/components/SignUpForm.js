@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import styles from './Form.module.css'
 const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -9,7 +9,7 @@ const SignUpForm = () => {
 
     const data = {
       email: email,
-      username:'gocsa',
+      username:'riki',
       password: password,
       confirmed: false,
       provider: 'local',
@@ -26,13 +26,13 @@ const SignUpForm = () => {
     };
     
     fetch("https://studenthunt.herokuapp.com/api/auth/local/register", requestOptions)
-      .then(response => response.text())
+      .then(response => response.json())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.form}>
       <label>
         Email:
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
