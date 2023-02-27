@@ -16,6 +16,7 @@
 }
 .prodImg img {
     border-radius: 10px;
+    height: 250px;
 }
 .prodLogo {
     background: white;
