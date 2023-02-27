@@ -24,6 +24,11 @@ function App() {
       <Route path='sport' element={<Sport/>} />
       <Route path='entertainment' element={<Entertainment />} />
       <Route path='technic' element={<Technic />} />
+      <Route path='accesories/:id' element={<ProductPage/>} />
+      <Route path='dress/:id' element={<ProductPage/>} />
+      <Route path='sport/:id' element={<ProductPage/>} />
+      <Route path='entertainment/:id' element={<ProductPage/>} />
+      <Route path='technic/:id' element={<ProductPage/>} />
       <Route path='food/:id' element={<ProductPage/>} />
       </Routes>
       </BrowserRouter>
