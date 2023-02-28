@@ -4,6 +4,7 @@ const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
+  const [registered,setRegistered]=useState(false)
   const handleEmail = (e)=>{
     const email = e.target.value
     if(email.endsWith("edu.ge")){
@@ -35,7 +36,10 @@ const SignUpForm = () => {
     
     fetch("https://studenthunt.herokuapp.com/api/auth/local/register", requestOptions)
       .then(response => response.json())
-      .then(result => console.log(result))
+      .then(result => {
+        console.log(result)
+        setRegistered(true)
+      })
       .catch(error => console.log('error', error));
   };
 
@@ -58,6 +62,7 @@ const SignUpForm = () => {
       
       email!=="No student mail"&&email.length>0&&password.length>5&& <button type="submit">Sign up</button>
       }
+      {registered&&<p>თქვენ წარმატებით გაიარეთ რეგისტრაცია, გთხოვთ შეამოწმოთ მეილი და გაიაროთ ვერიფიკაცია</p>}
     </form>
   );
 };
