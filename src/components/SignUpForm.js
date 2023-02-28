@@ -6,7 +6,7 @@ const SignUpForm = () => {
   const [username, setUsername] = useState('');
   const handleEmail = (e)=>{
     const email = e.target.value
-    if(email.endsWith("@edu.ge")){
+    if(email.endsWith("edu.ge")){
       setEmail(email)
     }else{
       setEmail('No student mail')
@@ -47,7 +47,7 @@ const SignUpForm = () => {
       </label>
       <label>
         Email:
-        <input type="email"  onBlur={handleEmail} />
+        <input type="email"  onChange={handleEmail} />
       </label>
       {email==='No student mail' && <p>გთხოვთ შეიყვანეთ სტუდენტის აქტიური მეილი</p>}
       <label>
