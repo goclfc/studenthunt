@@ -35,10 +35,10 @@ const Login = () => {
   fetch("https://studenthunt.herokuapp.com/api/auth/local", requestOptions)
     .then(response => response.json())
     .then(result => {
-      console.log(result.jwt)
+      console.log(result,1111)
       if(result.jwt){
         localStorage.setItem('token',result.jwt)
-        localStorage.setItem('user',result.user.id)
+        localStorage.setItem('user',JSON.stringify(result.user))
         window.location.reload(false)
       }
     })

@@ -3,17 +3,18 @@ import logo from "../resources/images/Group.svg";
 import name from "../resources/images/name.svg";
 import Login from "./Login";
 import styles from './Header.module.css'
-import avatar from '../resources/images/Avatar.svg'
+import avatar from '../resources/images/avatar.png'
 import userIcon from '../resources/images/user.svg'
 import layersIcon from '../resources/images/2-layers.svg'
 import zapIcon from '../resources/images/zap.svg'
 import settingsIcon from '../resources/images/settings.svg'
 import logOutIcon from '../resources/images/log-out.svg'
+import {FaBars}  from 'react-icons/fa'
 const Header = (props) => {
   const showLogin = props.showLogin;
   const setShowLogin = props.setShowLogin
   const [showProfile,setShowProfile]=useState(false)
-  const user = localStorage.getItem('user')
+  const user = JSON.parse(localStorage.getItem('user'))
   const token = localStorage.getItem('token')
 
   console.log(user)
@@ -44,7 +45,7 @@ const Header = (props) => {
         className={styles.buttonsWrapper}
       >
 
-        {user? <button onClick={handleProfileClick}>პროფილი</button>
+        {user? <button onClick={handleProfileClick}><FaBars/></button>
         
       :
         <button className="mr-4" onClick={handleLogin}>
@@ -59,10 +60,10 @@ const Header = (props) => {
             </div>
             <div className={styles.userInfo}>
               <div>
-              ია მეძმარაშვილი
+              {user.username}
             </div>
             <div>
-              ia.medzmarashvili@iliauni.ge
+              {user.email}
             </div>
             </div>
           </div>

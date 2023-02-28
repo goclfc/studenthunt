@@ -17,12 +17,15 @@
     position: absolute;
     background-color: white;
    
-    top: 6rem;
-    right: 10px;
+    top: 60px;
+    right: 0px;
     display: flex;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
     padding:10px;
     flex-direction: column;
+}
+.profile div {
+    cursor: pointer;
 }
 .userHeader {
     display: flex;
