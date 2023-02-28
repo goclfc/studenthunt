@@ -48,7 +48,7 @@ const Header = (props) => {
         {user? <button onClick={handleProfileClick}><FaBars/></button>
         
       :
-        <button className="mr-4" onClick={handleLogin}>
+        <button className="mr-4 font-bold" onClick={handleLogin}>
           შესვლა
         </button>
       }
