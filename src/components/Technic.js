@@ -5,7 +5,8 @@ import Product from "./Product";
 import styles from "./Products.module.css"
 const Technic = () => {
   const [products,setProducts] = useState([])
-  const token = localStorage.getItem("token")
+  const viewToken ="2d2e594e8d957841f22355d81342883269555efa56005ac0ef9ad3733063762172696820620b331068e3a8b7cf96f77882f61ea187d71c73ea0367b913b28014c84da44d4e5059750a7af0b7070c017b7bfa721f6c9adf70f905932d92a16ea0f890372efd6559b61b0d2ecf487dbeca78ee99f2243a3e6c47543bce6336d86b"
+  const token = localStorage.getItem("token")||viewToken;
   useEffect(()=>{
     var myHeaders = new Headers();
     myHeaders.append("Authorization", `Bearer ${token}`)

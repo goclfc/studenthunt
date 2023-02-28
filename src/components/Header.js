@@ -9,8 +9,9 @@ import layersIcon from '../resources/images/2-layers.svg'
 import zapIcon from '../resources/images/zap.svg'
 import settingsIcon from '../resources/images/settings.svg'
 import logOutIcon from '../resources/images/log-out.svg'
-const Header = () => {
-  const [showLogin, setShowLogin] = useState(false);
+const Header = (props) => {
+  const showLogin = props.showLogin;
+  const setShowLogin = props.setShowLogin
   const [showProfile,setShowProfile]=useState(false)
   const user = localStorage.getItem('user')
   const token = localStorage.getItem('token')

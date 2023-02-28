@@ -50,18 +50,11 @@ const Login = () => {
     }
     return (
       <div>
-        <div className="signin-header">გაიარე ავტორიზაცია</div>
-        <div className="signin-text">
-          ავტორიზაციისთვის აუცილებელია, იყოთ საქართველოში არსებული უნივერსიტეტის
-          სტუდენტი და გაგაჩნდეთ უნივერსიტეტის აქტიური ელ-ფოსტა.
-        </div>
+        <div className="signin-header">ავტორიზაცია</div>
         <div className="signin-inputs">
           <input type="email" placeholder="ელ-ფოსტა" onChange={saveEmail}/>
           <input type="password" placeholder="პაროლი" onChange={savePassword}/>
           <div className="signin-checkboxes">
-            <div>
-              <checkbox>დამახსოვრება</checkbox>
-            </div>
             <div>
               <button>დაგავიწყდა პაროლი?</button>
             </div>
