@@ -34,9 +34,7 @@ const ProductPage = (props) => {
         }}
         className={styles.cover}
       ></div>
-      <div className={styles.logo}>
-        <img src={product.logoUrl} />
-      </div>
+
       <div className={styles.info}>
         <div className={styles.productName}>{product.productName}   {product.description}</div>
     
