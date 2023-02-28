@@ -20,7 +20,12 @@ const Products = () => {
       fetch("https://studenthunt.herokuapp.com/api/products", requestOptions)
         .then((response) => response.json())
         .then((result) => setProducts(result.data))
-        .catch((error) => console.log("error", error));
+        .catch((error) => {
+          console.log("error", error)
+          localStorage.removeItem('token')
+          localStorage.removeItem('user')
+          window.location.reload(false)
+        });
     }
   }, []);
   console.log(products);

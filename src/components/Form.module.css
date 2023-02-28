@@ -4,5 +4,24 @@
 }
 .form label {
     margin:10px;
-    padding:10px;
+    padding:10px; 
+    font-weight: bold!important;
+    border-bottom: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form input {
+    margin-left: 20px!important;
+    padding: 5px;
+    background-color: aqua;
+}
+.form button {
+    background-color: green;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+.form button:hover {
+    background-color: rgb(8, 196, 8);
 }

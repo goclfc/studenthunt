@@ -3,7 +3,15 @@ import styles from './Form.module.css'
 const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const [username, setUsername] = useState('');
+  const handleEmail = (e)=>{
+    const email = e.target.value
+    if(email.endsWith("@edu.ge")){
+      setEmail(email)
+    }else{
+      setEmail('No student mail')
+    }
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -33,15 +41,23 @@ const SignUpForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
+            <label>
+        Username:
+        <input type="text" value={username} onChange={(e)=> setUsername(e.target.value)} />
+      </label>
       <label>
         Email:
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input type="email"  onBlur={handleEmail} />
       </label>
+      {email==='No student mail' && <p>გთხოვთ შეიყვანეთ სტუდენტის აქტიური მეილი</p>}
       <label>
         Password:
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </label>
-      <button type="submit">Sign up</button>
+      {
+      
+      email!=="No student mail"&&email.length>0&&password.length>5&& <button type="submit">Sign up</button>
+      }
     </form>
   );
 };
