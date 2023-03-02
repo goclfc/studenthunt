@@ -16,7 +16,7 @@ const ProductPage = (props) => {
       redirect: 'follow'
     };
     
-    fetch(`http://studenthunt.herokuapp.com/api/products/${id}`, requestOptions)
+    fetch(`https://studenthunt.herokuapp.com/api/products/${id}`, requestOptions)
       .then(response => response.json())
       .then(result => setProduct(result.data.attributes))
       .catch(error => console.log('error', error));
