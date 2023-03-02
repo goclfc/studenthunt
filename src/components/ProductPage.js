@@ -5,10 +5,22 @@ import { sendEmail } from "./sendEmail";
 import TimestampConverter from "./TimeStampConverter";
 const ProductPage = (props) => {
   const [showCode,setShowCode]=useState(false)
+  const [product,setProduct] = useState({})
   let state = useLocation();
   const showLogin = props.showLogin
   const setShowLogin = props.setShowLogin
-  const product = state.state.product.attributes;
+  const id = state.state.product.id;
+  useEffect(()=>{
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+    fetch(`http://studenthunt.herokuapp.com/api/products/${id}`, requestOptions)
+      .then(response => response.json())
+      .then(result => setProduct(result.data.attributes))
+      .catch(error => console.log('error', error));
+  },[id])
   const token = localStorage.getItem('token')
   const [randomCode,setRandomCode]=useState('')
   const handleClick=(e)=>{
