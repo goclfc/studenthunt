@@ -27,6 +27,7 @@ function App() {
       <Route path='entertainment' element={<Entertainment />} />
       <Route path='technic' element={<Technic />} />
       <Route path='accesories/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
+      <Route path='product/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
       <Route path='dress/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
       <Route path='sport/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
       <Route path='entertainment/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />

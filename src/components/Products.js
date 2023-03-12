@@ -44,7 +44,7 @@ const Products = () => {
         <div className={styles.productsWrapper}>
           {products.length > 0 &&
             products.map((product) => (
-              <Link to={":" + product.id} state={{ product }} key={product.id}>
+              <Link to={"product/" + product.attributes.company} state={{ product }} key={product.id}>
                 <Product product={product} />
               </Link>
             ))}
