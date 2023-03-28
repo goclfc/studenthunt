@@ -1,0 +1,76 @@
+.product_wrapper {
+  width: 380px;
+  height: 270px;
+  background: #ffffff;
+  border: 1px solid #a8dadc;
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 21px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product_header {
+  display: flex;
+  width: 100%;
+  border-bottom: 0.5px solid #A8DADC;
+
+}
+.product_img {
+  width:50%;
+  padding: 10px;
+}
+.product_description_wrapper{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+}
+.product_logo_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product_name {
+  font-family: 'FiraGO';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #26205E;
+}
+.product_info {
+  font-family: 'FiraGO';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 17px;
+
+color: #26205E;
+}
+.product_price {
+  font-family: 'FiraGO';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+color: #26205E;
+}
+.product_discount {
+  background: #E63946;
+  border-radius: 18px;
+  font-family: 'FiraGO';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+padding: 15px;
+}

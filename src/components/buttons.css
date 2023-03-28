@@ -1,0 +1,9 @@
+.red {
+  background: #e63946;
+  border-radius: 14px;
+  color: white;
+  padding: 10px;
+}
+.default {
+    margin-right: 10px;
+}

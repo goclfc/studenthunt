@@ -1,0 +1,38 @@
+.input-group {
+  position: relative;
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #a8dadc;
+  border-radius: 24.5px;
+  width: 270px;
+  padding: 5px;
+}
+.input-group input {
+    border: none;
+    outline: none;
+    width: 80%;
+    padding-left: 10px;
+}
+.form-control {
+  border-radius: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.input-group-append {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+  display: flex;
+
+}
+
+.btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  color: #478789;
+  z-index: 0;
+}

@@ -1,8 +1,8 @@
-import React,{useState} from "react";
-import Header from "./components/Header";
-import Categories from "./components/Categories";
+import React, { useState } from "react";
+import Header from "./components/Header/Header";
+import Categories from "./components/Categories/Categories";
 import Products from "./components/Products";
-import {BrowserRouter,Routes,Route,Link} from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Food from "./components/Food";
 import Accesories from "./components/Accesories";
 import Dress from "./components/Dress";
@@ -10,12 +10,18 @@ import Sport from "./components/Sport";
 import Entertainment from "./components/Entertainment";
 import Technic from "./components/Technic";
 import ProductPage from "./components/ProductPage";
+import Banner from "./components/Banner/Banner";
+import Section from "./components/products/Sections";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
   return (
-    <div className="App bg-bg-white w-full h-auto pb-8">
-      <BrowserRouter>
+    <div>
+      <Header />
+      <Banner />
+      <Categories/>
+      <Section />
+      {/* <BrowserRouter>
       <Header showLogin={showLogin} setShowLogin={setShowLogin}/>
       <Categories />
       <Routes>
@@ -34,7 +40,7 @@ function App() {
       <Route path='technic/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
       <Route path='food/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
       </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }

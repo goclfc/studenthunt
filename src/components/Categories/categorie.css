@@ -1,0 +1,25 @@
+.categorie_wrapper {
+    background: #FFFFFF;
+    border: 0.5px solid #A8DADC;
+    border-radius: 28px;
+    width:141px;
+    height: 181px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.categorie_name {  
+    padding: 10px;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.categorie_logo{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

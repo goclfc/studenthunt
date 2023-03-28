@@ -36,63 +36,68 @@ const Header = (props) => {
     window.location.reload(false)
   }
   return (
-    <div className={styles.headerWrapper}>
-      <div className={styles.headerLogo}>
-        <img src={logo} alt="logo" />
-        <img src={name} alt="Studenthunt" />
-      </div>
-      <div
-        className={styles.buttonsWrapper}
-      >
+    // <div className={styles.headerWrapper}>
+    //   <div className={styles.headerLogo}>
+    //     <img src={logo} alt="logo" />
+    //     <img src={name} alt="Studenthunt" />
+    //   </div>
+    //   <div
+    //     className={styles.buttonsWrapper}
+    //   >
 
-        {user? <button onClick={handleProfileClick}><FaBars/></button>
+    //     {user? <button onClick={handleProfileClick}><FaBars/></button>
         
-      :
-        <button className="mr-4 font-bold" onClick={handleLogin}>
-          შესვლა
-        </button>
-      }
-      {showProfile&&
-        <div className={styles.profile}>
-          <div className={styles.userHeader}>
-            <div className={styles.userIcon}> 
-              <img src={avatar}/>
-            </div>
-            <div className={styles.userInfo}>
-              <div>
-              {user.username}
-            </div>
-            <div>
-              {user.email}
-            </div>
-            </div>
-          </div>
-          <div className={styles.profileBody}>
-            <div className={styles.profileSection}>
-            <img src={userIcon}/> პირადი ინფო
-            </div>
-            <div className={styles.profileSection}>
-            <img src={layersIcon}/> ჩემი შეთავაზებები
-            </div>
-            <div className={styles.profileSection}>
-            <img src={zapIcon}/> სურვილები
-            </div>
-            <div className={styles.profileSection}>
-            <img src={settingsIcon}/> პარამეტრები
-            </div>
+    //   :
+    //     <button className="mr-4 font-bold" onClick={handleLogin}>
+    //       შესვლა
+    //     </button>
+    //   }
+    //   {showProfile&&
+    //     <div className={styles.profile}>
+    //       <div className={styles.userHeader}>
+    //         <div className={styles.userIcon}> 
+    //           <img src={avatar}/>
+    //         </div>
+    //         <div className={styles.userInfo}>
+    //           <div>
+    //           {user.username}
+    //         </div>
+    //         <div>
+    //           {user.email}
+    //         </div>
+    //         </div>
+    //       </div>
+    //       <div className={styles.profileBody}>
+    //         <div className={styles.profileSection}>
+    //         <img src={userIcon}/> პირადი ინფო
+    //         </div>
+    //         <div className={styles.profileSection}>
+    //         <img src={layersIcon}/> ჩემი შეთავაზებები
+    //         </div>
+    //         <div className={styles.profileSection}>
+    //         <img src={zapIcon}/> სურვილები
+    //         </div>
+    //         <div className={styles.profileSection}>
+    //         <img src={settingsIcon}/> პარამეტრები
+    //         </div>
             
-          </div>
-          <div className={styles.profileSection} onClick={handleLogOut}>
-            <img src={logOutIcon}/> გასვლა
-          </div>
-        </div>
-      }
-      </div>
-      {showLogin && (
-        <div className="loginBg" onClick={handleClick}>
-          <Login />
-        </div>
-      )}
+    //       </div>
+    //       <div className={styles.profileSection} onClick={handleLogOut}>
+    //         <img src={logOutIcon}/> გასვლა
+    //       </div>
+    //     </div>
+    //   }
+    //   </div>
+    //   {showLogin && (
+    //     <div className="loginBg" onClick={handleClick}>
+    //       <Login />
+    //     </div>
+    //   )}
+    // </div>
+    <div className={styles.header_wrapper}>
+      <div className={styles.header_logo}></div>
+      <div className={styles.header_search}></div>
+      <div className={styles.header_menu}></div>
     </div>
   );
 };
