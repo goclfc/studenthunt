@@ -21,6 +21,9 @@ function App() {
       <Banner />
       <Categories/>
       <Section />
+      <Section />
+      <Section />
+      <Section />
       {/* <BrowserRouter>
       <Header showLogin={showLogin} setShowLogin={setShowLogin}/>
       <Categories />
