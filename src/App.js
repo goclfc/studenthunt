@@ -12,23 +12,40 @@ import Technic from "./components/Technic";
 import ProductPage from "./components/ProductPage";
 import Banner from "./components/Banner/Banner";
 import Section from "./components/products/Sections";
+import Login from "./components/Login";
+import Landing from "./components/Landing/Landing";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
+  // var myHeaders = new Headers();
+  // const token = localStorage.getItem('token')
+  // myHeaders.append("Authorization", `Bearer ${token}`)
+  
+  // var requestOptions = {
+  //   method: 'GET',
+  //   headers: myHeaders,
+  //   redirect: 'follow'
+  // };
+  
+  // fetch("https://studenthunt.herokuapp.com/api/categories?populate=*", requestOptions)
+  //   .then(response => response.json())
+  //   .then(result => {
+     
+  //     console.log(result)
+  //   })
+  //   .catch(error => console.log('error', error));
+
   return (
     <div>
-      <Header />
-      <Banner />
-      <Categories/>
-      <Section />
-      <Section />
-      <Section />
-      <Section />
-      {/* <BrowserRouter>
+
+
+
+      <BrowserRouter>
       <Header showLogin={showLogin} setShowLogin={setShowLogin}/>
-      <Categories />
       <Routes>
-      <Route index element={<Products />} />
+      <Route index element={<Landing />} />
+      <Route path='login' element={<Login />} />
+
       <Route path='food' element={<Food />} />
       <Route path='accesories' element={<Accesories />} />
       <Route path='dress' element={<Dress />} />
@@ -43,7 +60,7 @@ function App() {
       <Route path='technic/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
       <Route path='food/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
       </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }
