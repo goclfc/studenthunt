@@ -16,7 +16,7 @@ import Login from "./components/Login";
 import Landing from "./components/Landing/Landing";
 
 function App() {
-  const [showLogin, setShowLogin] = useState(false);
+  const [logedIn, setLogedIn] = useState(false);
   // var myHeaders = new Headers();
   // const token = localStorage.getItem('token')
   // myHeaders.append("Authorization", `Bearer ${token}`)
@@ -41,10 +41,10 @@ function App() {
 
 
       <BrowserRouter>
-      <Header showLogin={showLogin} setShowLogin={setShowLogin}/>
+      <Header logedIn={logedIn} setLogedIn={setLogedIn}/>
       <Routes>
       <Route index element={<Landing />} />
-      <Route path='login' element={<Login />} />
+      <Route path='login' element={<Login logedIn={logedIn} setLogedIn={setLogedIn}/>} />
 
       <Route path='food' element={<Food />} />
       <Route path='accesories' element={<Accesories />} />
@@ -52,13 +52,13 @@ function App() {
       <Route path='sport' element={<Sport/>} />
       <Route path='entertainment' element={<Entertainment />} />
       <Route path='technic' element={<Technic />} />
-      <Route path='accesories/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
-      <Route path='product/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
-      <Route path='dress/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
-      <Route path='sport/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
-      <Route path='entertainment/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
-      <Route path='technic/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
-      <Route path='food/:id' element={<ProductPage showLogin={showLogin} setShowLogin={setShowLogin}/>} />
+      <Route path='accesories/:id' element={<ProductPage />} />
+      <Route path='product/:id' element={<ProductPage />} />
+      <Route path='dress/:id' element={<ProductPage />} />
+      <Route path='sport/:id' element={<ProductPage />} />
+      <Route path='entertainment/:id' element={<ProductPage />} />
+      <Route path='technic/:id' element={<ProductPage />} />
+      <Route path='food/:id' element={<ProductPage />} />
       </Routes>
       </BrowserRouter>
     </div>

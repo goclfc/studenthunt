@@ -5,6 +5,7 @@
   height: 100vh;
   background: hsla(0, 27%, 4%, 0.3);
 }
+
 .signin-wrapper {
   width: 380px;
   height: 596px;
@@ -12,6 +13,13 @@
   background: #ffffff;
   border-radius: 29px;
   margin: 100px auto auto auto;
+}
+.signin-greeting div {
+  display: flex;
+  align-items: center;
+}
+.signin-greeting div img {
+  margin-top: -8px;
 }
 .signin-greeting p {
   font-family: "FiraGO";
@@ -22,6 +30,7 @@
   color: #457b9d;
   margin-bottom: 10px;
 }
+
 .signin-greeting h2 {
   font-family: "FiraGO";
   font-style: normal;
@@ -31,7 +40,9 @@
 
   color: #1d3557;
   margin-bottom: 10px;
+  margin-right: 10px;
 }
+
 .signin-inputs label {
   font-family: "FiraGO";
   font-style: normal;
@@ -41,6 +52,7 @@
 
   color: #1d3557;
 }
+
 .signin-inputs input {
   margin: 10px 0px;
   width: 321px;
@@ -49,6 +61,69 @@
   border-radius: 7px;
   padding-left: 10px;
 }
+
 .signin-inputs input:focus {
   outline: none !important;
+}
+
+.signin-buttons button {
+  width: 321px;
+  height: 41px;
+  background: #1D3557;
+  border-radius: 7px;
+  font-family: 'FiraGO';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+
+  margin: 10px 0px;
+  color: #FFFFFF;
+}
+
+.signin-buttons .reg {
+  color: black;
+  background: white;
+  border: 0.5px solid #457B9D;
+  border-radius: 7px;
+}
+.signin-check div {
+  display: flex;
+  align-items: center;
+
+  color: black;
+}
+.signin-check div input {
+  margin-right: 5px;
+}
+.signin-check {
+  margin: 10px 0px;
+  font-family: 'FiraGO';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 13px;
+color: red;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.signin-border {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.signin-border div {
+  width: 141px;
+  height: 0px;
+  ;
+  border: 1px solid #D9D9D9;
+}
+
+.signin-border span {
+  margin: 0px 10px;
 }
