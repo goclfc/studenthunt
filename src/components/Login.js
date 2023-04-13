@@ -44,6 +44,9 @@ const Login = (props) => {
         })
         .catch(error => console.log('error', error));
     }
+    const handleRegister=()=>{
+      navigate('/register')
+    }
     return (
       <div className="signin-wrapper">
         <div className="signin-logo">
@@ -72,7 +75,7 @@ const Login = (props) => {
           <div className="signin-border">
             <div></div><span>ან</span> <div></div>
           </div>
-          <button className="reg">დარეგისტრირდი</button>
+          <button className="reg" onClick={handleRegister}>დარეგისტრირდი</button>
 
         </div>
 

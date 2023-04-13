@@ -44,7 +44,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form onSubmit={handleSubmit} className="register-form-wrapper">
             <label>
         Username:
         <input type="text" value={username} onChange={(e)=> setUsername(e.target.value)} />

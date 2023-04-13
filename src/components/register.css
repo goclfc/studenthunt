@@ -1,7 +1,23 @@
 .register-wrapper {
-  padding: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  background: rgba(39, 39, 39, 0.66);
+}
+
+.signup-form-wrapper {
+  margin-top: 100px;
+  width: 596px;
+  height: 849px;
+  background: #FFFFFF;
+  border-radius: 29px;
+}
+.register-form {
+  
 }

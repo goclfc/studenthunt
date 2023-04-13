@@ -10,10 +10,14 @@ const Menu = ({actions})=>{
     const handleClick = ()=>{
         navigate('/login')
     }
+    const handleRegister = ()=>{
+        console.log('clicked register ')
+        navigate('/register')
+    }
     return (
         <div className="flex justify-between">
-            {logedIn?    <><button name="შესვლა" onClick={handleClick}> შესვლა</button>
-            <Btn name="რეგისტრაცია" color='red'/> </> :<button>პროფილი</button>
+            {!logedIn?    <><button name="შესვლა" onClick={handleClick}> შესვლა</button>
+            <button name="რეგისტრაცია" color='red' onClick={handleRegister}>რეგისტრაცია</button> </>:<button>პროფილი</button>
             }
         
         </div>

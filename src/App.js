@@ -14,6 +14,7 @@ import Banner from "./components/Banner/Banner";
 import Section from "./components/products/Sections";
 import Login from "./components/Login";
 import Landing from "./components/Landing/Landing";
+import Register from "./components/Register";
 
 function App() {
   const [logedIn, setLogedIn] = useState(false);
@@ -45,6 +46,7 @@ function App() {
       <Routes>
       <Route index element={<Landing />} />
       <Route path='login' element={<Login logedIn={logedIn} setLogedIn={setLogedIn}/>} />
+      <Route path='register' element={<Register logedIn={logedIn} setLogedIn={setLogedIn}/>} />
 
       <Route path='food' element={<Food />} />
       <Route path='accesories' element={<Accesories />} />
