@@ -34,7 +34,6 @@ const Login = (props) => {
       fetch("https://studenthunt.herokuapp.com/api/auth/local", requestOptions)
         .then(response => response.json())
         .then(result => {
-          console.log(result, 1111)
           if (result.jwt) {
             localStorage.setItem('token', result.jwt)
             localStorage.setItem('user', JSON.stringify(result.user))

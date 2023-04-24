@@ -17,7 +17,6 @@ const Header = (props) => {
   const user = JSON.parse(localStorage.getItem('user'))
   const token = localStorage.getItem('token')
 
-  console.log(user)
   const handleLogin = () => {
     setShowLogin(true);
   };

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Form.module.css'
+import logo from '../resources/images/logostd.svg'
 const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -37,33 +38,50 @@ const SignUpForm = () => {
     fetch("https://studenthunt.herokuapp.com/api/auth/local/register", requestOptions)
       .then(response => response.json())
       .then(result => {
-        console.log(result)
         setRegistered(true)
       })
       .catch(error => console.log('error', error));
   };
 
   return (
-    <form onSubmit={handleSubmit} className="register-form-wrapper">
-            <label>
-        Username:
-        <input type="text" value={username} onChange={(e)=> setUsername(e.target.value)} />
-      </label>
-      <label>
-        Email:
-        <input type="email"  onChange={handleEmail} />
-      </label>
-      {email==='No student mail' && <p>გთხოვთ შეიყვანეთ სტუდენტის აქტიური მეილი</p>}
-      <label>
-        Password:
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </label>
-      {
-      
-      email!=="No student mail"&&email.length>0&&password.length>5&& <button type="submit">Sign up</button>
-      }
-      {registered&&<p>თქვენ წარმატებით გაიარეთ რეგისტრაცია, გთხოვთ შეამოწმოთ მეილი და გაიაროთ ვერიფიკაცია</p>}
-    </form>
+    <div className="register-form-wrapper">
+      <div className='register-form-header'>
+        <div className='register-form-logo'><img src={logo}/></div>
+        <div className='register-form-greeting'>რეგისტრაცია</div>
+      </div>
+      <div className='register-form-inputs'>
+        <div className='input-short'>
+
+        <label>სახელი</label>
+        <input type="text" className='input-short'></input>
+        </div>
+        <div className='input-short'>
+
+        <label>გვარი</label>
+        <input type="text" className='input-short'></input>
+        </div>
+        <div className='input-long'>
+        
+        <label>უნივერსიტეტის ელ-ფოსტა</label>
+        <input type="text" placeholder='you@university.edu.ge' className='input-long'></input>
+       
+       </div>
+        <div className='input-long'>
+        <label>პაროლი</label>
+        <input type="password" placeholder='password' className='input-long'></input>
+        </div>
+        <div className='input-long'> 
+        <label>მობილური</label>
+        <input type="phone" placeholder='5** ** ** **' className='input-long'></input>
+        </div>
+        <div className='input-long'></div>
+        <label>რაზე ისურვებდით ფასდაკლებას?</label>
+        </div>
+        <div className='input-long'>
+        <textarea></textarea>
+        </div>
+      <div className='register-form-button'> <button>რეგისტრაცია</button></div>
+    </div>
   );
 };
 

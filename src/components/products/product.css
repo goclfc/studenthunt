@@ -1,6 +1,5 @@
 .product_wrapper {
   width: 380px;
-  height: 270px;
   background: #ffffff;
   border: 1px solid #a8dadc;
   box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.05);
@@ -75,4 +74,9 @@ padding: 7px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+}
+.product_logo_wrapper img{
+  width: 250px;
+  height: 120px;
+  overflow: hidden;
 }

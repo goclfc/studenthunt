@@ -1,3 +1,7 @@
+.banner_wrapper {
+    
+  
+}
 .point {
     width: 14px;
     height: 14px;
@@ -9,5 +13,5 @@
 }
 .banner_wrapper img{
     width: 100%;
-    height: auto;
+    height: 200px;
 }

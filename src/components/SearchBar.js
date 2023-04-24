@@ -11,7 +11,6 @@ function SearchInput() {
   const handleSubmit = event => {
     event.preventDefault();
     // Do something with the search term, such as send a request to a server
-    console.log(searchTerm);
   };
 
   return (

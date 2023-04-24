@@ -25,7 +25,6 @@ const Sport = () => {
       })
       .catch(error => console.log('error', error));
   },[])
-  console.log(products)
   return (
     <div
       className="main flex justify-center w-full "

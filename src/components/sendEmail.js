@@ -16,7 +16,6 @@ export const sendEmail=(to,subject,text)=> {
       })
         .then(response => response.json())
         .then(data => {
-          console.log(data);
           alert('Email sent successfully!');
         })
         .catch(error => {

@@ -6,12 +6,10 @@ import { useNavigate } from "react-router-dom"
 const Menu = ({actions})=>{
     const navigate = useNavigate()
     const logedIn = actions.logedIn
-    console.log(actions)
     const handleClick = ()=>{
         navigate('/login')
     }
     const handleRegister = ()=>{
-        console.log('clicked register ')
         navigate('/register')
     }
     return (
