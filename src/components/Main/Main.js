@@ -1,20 +1,31 @@
-import React, { useState } from "react"
-import { useLocation } from 'react-router-dom'
+import React, { useEffect, useState } from "react"
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { useFetchedData } from '../../services/HttpServices'
 import Product from '../products/Product'
 const Main = (props) => {
+    const [prodsToShow,setProdsToShow] = useState([])
     const location = useLocation()
     console.log(location, 'this is mains location')
     const pathname = location.pathname.substring(1)
     const data = useFetchedData(pathname)
     const products = useFetchedData('products')
-    console.log(products, 'ptoducts')
+    const {id}= useParams()
+    console.log(products[0]?.attributes?.categories.data[0].id, 'ptoducts')
+    useEffect(()=>{
+        if(products.length>0 &&id){
+
+            const selectedProducts = products.filter(prod => prod.attributes.categories.data[0]?.id == id) 
+            setProdsToShow(selectedProducts)
+        }
+    },[products])
     return (
         <div>
-            {products ? products.map(item => {
+            {prodsToShow ? prodsToShow.map(item => {
                 
                 return (
-                    <Product id={item.id} />
+                    <Link to={`../../products/${item.id}`}>
+                        <Product id={item.id} />
+                    </Link>
                 )
             })
                 : <div>Loading...</div>}

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Product from './Product'
 import './section.css'
 const Section = (props)=>{
@@ -11,8 +12,9 @@ const Section = (props)=>{
             </div>
             <div className="products_wrapper">
                 {props.data?.attributes.products.data.map(item =>(
-
+                <Link to={`../../products/${item.id}`}>
                 <Product id={item.id}/>
+                </Link>
                 ))}
             </div>
 
