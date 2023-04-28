@@ -76,7 +76,6 @@ justify-content: space-between;
 align-items: center;
 }
 .product_logo_wrapper img{
-  width: 250px;
-  height: 120px;
+  margin: 20px;
   overflow: hidden;
 }
