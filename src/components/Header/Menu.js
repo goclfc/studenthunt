@@ -1,6 +1,4 @@
 import React from "react"
-import { Btn } from "../Buttons"
-import Login from "../Login"
 import { useNavigate } from "react-router-dom"
 
 const Menu = ({actions})=>{
@@ -13,9 +11,9 @@ const Menu = ({actions})=>{
         navigate('/register')
     }
     return (
-        <div className="flex justify-between">
+        <div className="header-buttons">
             {!logedIn?    <><button name="შესვლა" onClick={handleClick}> შესვლა</button>
-            <button name="რეგისტრაცია" color='red' onClick={handleRegister}>რეგისტრაცია</button> </>:<button>პროფილი</button>
+            <button name="რეგისტრაცია" className="red" onClick={handleRegister}>რეგისტრაცია</button> </>:<button>პროფილი</button>
             }
         
         </div>

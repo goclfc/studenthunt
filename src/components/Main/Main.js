@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react"
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { useFetchedData } from '../../services/HttpServices'
 import Product from '../products/Product'
+import './main.css'
+import Categories from "../Categories/Categories"
 const Main = (props) => {
     const [prodsToShow,setProdsToShow] = useState([])
     const location = useLocation()
@@ -19,7 +21,7 @@ const Main = (props) => {
         }
     },[products])
     return (
-        <div>
+        <div className="main">
             {prodsToShow ? prodsToShow.map(item => {
                 
                 return (

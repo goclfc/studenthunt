@@ -2,9 +2,10 @@ import React from "react";
 import Logo from "../Logo";
 import SearchInput from "../SearchBar";
 import Menu from "./Menu";
+import './header.css'
 const Header = (props) => {
   return (
-    <div className="flex justify-between items-center w-full p-6">
+    <div className="header">
       <Logo />
       <SearchInput />
       <Menu actions={props}/>

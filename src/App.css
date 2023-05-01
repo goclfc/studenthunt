@@ -1,5 +1,13 @@
-.App {
-  text-align: center;
+#root {
+  display: flex;
+  justify-content: center;
+}
+.app {
+  max-width: 1400px;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+
 }
 
 .App-logo {
@@ -36,3 +44,5 @@
     transform: rotate(360deg);
   }
 }
+
+

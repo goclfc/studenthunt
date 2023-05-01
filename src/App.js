@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './App.css'
 import Header from "./components/Header/Header";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ProductPage from "./components/ProductPage";
@@ -8,42 +9,18 @@ import Register from "./components/Register";
 import Main from "./components/Main/Main";
 function App() {
   const [logedIn, setLogedIn] = useState(false);
-  // var myHeaders = new Headers();
-  // const token = localStorage.getItem('token')
-  // myHeaders.append("Authorization", `Bearer ${token}`)
-  
-  // var requestOptions = {
-  //   method: 'GET',
-  //   headers: myHeaders,
-  //   redirect: 'follow'
-  // };
-  
-  // fetch("https://studenthunt.herokuapp.com/api/categories?populate=*", requestOptions)
-  //   .then(response => response.json())
-  //   .then(result => {
-     
-  //     console.log(result)
-  //   })
-  //   .catch(error => console.log('error', error));
-
   return (
-    <div>
-
-
-
-      <BrowserRouter>
-      <Header logedIn={logedIn} setLogedIn={setLogedIn}/>
+    <div className="app"> 
+    <BrowserRouter>
+      <Header logedIn={logedIn} setLogedIn={setLogedIn} />
       <Routes>
-      <Route index element={<Landing />} />
-      <Route path='login' element={<Login logedIn={logedIn} setLogedIn={setLogedIn}/>} />
-      <Route path='register' element={<Register logedIn={logedIn} setLogedIn={setLogedIn}/>} />
-
-
-      <Route path='categories/:id' element={<Main />} />
-      <Route path='products/:id' element={<ProductPage />} />
-
+        <Route index element={<Landing />} />
+        <Route path='login' element={<Login logedIn={logedIn} setLogedIn={setLogedIn} />} />
+        <Route path='register' element={<Register logedIn={logedIn} setLogedIn={setLogedIn} />} />
+        <Route path='categories/:id' element={<Main />} />
+        <Route path='products/:id' element={<ProductPage />} />
       </Routes>
-      </BrowserRouter>
+    </BrowserRouter>
     </div>
   );
 }
